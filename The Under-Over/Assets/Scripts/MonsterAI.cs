@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 public class MonsterAI : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -34,8 +36,8 @@ public class MonsterAI : MonoBehaviour
     
     void Start()
     {
-        TryGetComponent<Animator>(out anim);
-        TryGetComponent<NavMeshAgent>(out nma);
+        anim = GetComponent<Animator>();
+        nma = GetComponent<NavMeshAgent>();
         InvokeRepeating("NavTick", 1f, 1f);
         SetSpeed();
     }
@@ -55,7 +57,8 @@ public class MonsterAI : MonoBehaviour
     }
 
     private void SetSpeed() {
-       nma.speed = speed; 
+        if (nma != null)
+        nma.speed = speed; 
     }
 
     private void IncreaseSpeed() {
