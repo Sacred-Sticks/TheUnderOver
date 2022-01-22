@@ -9,7 +9,7 @@ public class SparkObstacle : MonoBehaviour
     public float activeSec;
     public float resetSec;
     float timer;
-    bool isArmed;
+    //bool isArmed;
     [SerializeField] BoxCollider dmgBox;
     [SerializeField] ParticleSystem sparkEmitter;
     void Start()
@@ -22,14 +22,14 @@ public class SparkObstacle : MonoBehaviour
 
     void TurnOn()
     {
-        isArmed = true;
+        //isArmed = true;
         dmgBox.enabled = true;
         sparkEmitter.Play();
         Invoke("TurnOff", activeSec);
     }
     void TurnOff()
     {
-        isArmed = false;
+        //isArmed = false;
         dmgBox.enabled = false;
         sparkEmitter.Stop();
         Invoke("TurnOn", resetSec);

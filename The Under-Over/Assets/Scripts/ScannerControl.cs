@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class ScannerControl : MonoBehaviour
 {
     [SerializeField] private InputActionAsset playerControl;
-
+    [SerializeField] private GameObject monster;
     private InputAction scannerAction;
     private Animator animator;
 
