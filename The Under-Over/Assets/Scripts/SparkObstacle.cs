@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SparkObstacle : MonoBehaviour
 {
@@ -32,6 +33,12 @@ public class SparkObstacle : MonoBehaviour
         dmgBox.enabled = false;
         sparkEmitter.Stop();
         Invoke("TurnOn", resetSec);
+    }
+
+    private void OnTriggerEnter(Collider col) {
+        if (col.tag == "Player") {
+            SceneManager.LoadScene("Culling 2");
+        }
     }
     
 }
