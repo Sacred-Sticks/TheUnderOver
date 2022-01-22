@@ -27,15 +27,15 @@ public class CameraLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void Update() {
+    private void LateUpdate() {
         UpdateHorz();
         UpdateVert();
     }
     private void OnLookChange(InputAction.CallbackContext context) {
         Vector2 cameraLook = context.ReadValue<Vector2>();
 
-        horz = cameraLook.x * mouseSensitivity * Time.deltaTime;
-        vert = cameraLook.y * mouseSensitivity * Time.deltaTime;
+        horz = cameraLook.x * mouseSensitivity; //* Time.deltaTime;
+        vert = cameraLook.y * mouseSensitivity; //* Time.deltaTime;
     }
 
     private void UpdateHorz() {
