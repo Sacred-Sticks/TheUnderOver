@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - OverworldEnv
+  - OverworldEntity
+  - ShadowWorldEnv
+  - ShadowWorldEntity
+  - Player
   - 
   - 
   - 
