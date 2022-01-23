@@ -26,7 +26,6 @@ public class Movement : MonoBehaviour
 	private GameObject blueCam;
 	private GameObject redCam;
 	private float currentSpeedVal;
-	private bool isSlowed;
 	private void Awake() {
 
 		currentSpeedVal = moveSpeed;
@@ -48,7 +47,6 @@ public class Movement : MonoBehaviour
 		useAction.performed += Interact;
 		useAction.Enable();
 		rb = GetComponent<Rigidbody>();
-		isSlowed = false;
 	}
 
 	public void SlowMovement(float mod)
@@ -105,7 +103,6 @@ public class Movement : MonoBehaviour
     {
 		if (other.CompareTag("slowZone"))
         {
-			isSlowed = true;
 			Debug.Log("SlowZoneStay");
 			if (moveSpeed - slowedPenalty < currentSpeedVal) // if movement speed minus the penalty is less than the current speed, then slow the player back down
 				SlowMovement(moveSpeed - slowedPenalty);
