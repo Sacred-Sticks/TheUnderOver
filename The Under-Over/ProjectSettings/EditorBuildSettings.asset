@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Culling 3.unity
+    path: Assets/Scenes/Level.unity
     guid: 863f712847920fd46b1d96a93c4d5cba
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity

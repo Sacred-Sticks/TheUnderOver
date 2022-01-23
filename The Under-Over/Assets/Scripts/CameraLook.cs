@@ -37,8 +37,8 @@ public class CameraLook : MonoBehaviour
     private void OnLookChange(InputAction.CallbackContext context) {
         Vector2 cameraLook = context.ReadValue<Vector2>();
 
-        horz = cameraLook.x * currentSensitivity * Time.deltaTime;
-        vert = cameraLook.y * currentSensitivity * Time.deltaTime;
+        horz = cameraLook.x * currentSensitivity;
+        vert = cameraLook.y * currentSensitivity;
     }
 
     private void UpdateHorz() {

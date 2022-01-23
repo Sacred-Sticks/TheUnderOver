@@ -38,4 +38,8 @@ public class LeverToggle : MonoBehaviour
         for (int i = 0; i < optional_doorAnim.Length; i++)
             optional_doorAnim[i].SetBool("isOpen", !isActive);
     }
+
+    public bool GetIsActive() {
+        return isActive;
+    }
 }
