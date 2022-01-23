@@ -4159,6 +4159,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 66052821}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever
@@ -20864,11 +20868,39 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: leverAnim
       value: 
       objectReference: {fileID: 678405555}
     - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: optional_doorAnim
+      value: 
+      objectReference: {fileID: 349617022}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.data[0]
+      value: 
+      objectReference: {fileID: 1497281273}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.data[1]
+      value: 
+      objectReference: {fileID: 211055483}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.data[0]
+      value: 
+      objectReference: {fileID: 137390811}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.data[1]
       value: 
       objectReference: {fileID: 349617022}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
@@ -67690,9 +67722,37 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: optional_doorAnim
       value: 
       objectReference: {fileID: 1669151434}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.data[0]
+      value: 
+      objectReference: {fileID: 2052323891}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.data[1]
+      value: 
+      objectReference: {fileID: 2016859836}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.data[0]
+      value: 
+      objectReference: {fileID: 1669151434}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.data[1]
+      value: 
+      objectReference: {fileID: 2080315587}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever (2)
