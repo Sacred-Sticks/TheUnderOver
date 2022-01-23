@@ -7,13 +7,13 @@ public class CameraLook : MonoBehaviour
 {
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] private Transform playerBody;
-    [SerializeField] private float mouseSensitivity;
+    [SerializeField] private float maxSensitivity;
 
     private InputAction lookAction;
     private float horz;
     private float vert;
     private float verticalRotation;
-    public float interactRange;
+    private float currentSensitivity;
 
     private void Awake() {
         var actionMap = playerControls.FindActionMap("Main Controls");
@@ -37,8 +37,8 @@ public class CameraLook : MonoBehaviour
     private void OnLookChange(InputAction.CallbackContext context) {
         Vector2 cameraLook = context.ReadValue<Vector2>();
 
-        horz = cameraLook.x * mouseSensitivity; //* Time.deltaTime;
-        vert = cameraLook.y * mouseSensitivity; //* Time.deltaTime;
+        horz = cameraLook.x * currentSensitivity * Time.deltaTime;
+        vert = cameraLook.y * currentSensitivity * Time.deltaTime;
     }
 
     private void UpdateHorz() {
@@ -50,5 +50,14 @@ public class CameraLook : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
         
         transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+    }
+
+    public float getMaxSensitivity() {
+        return maxSensitivity;
+    }
+
+    public void setMouseSens(float sensitivity) {
+        currentSensitivity = sensitivity;
+        Debug.Log(currentSensitivity);
     }
 }
