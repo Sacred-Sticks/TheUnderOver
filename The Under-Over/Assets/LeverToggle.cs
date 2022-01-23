@@ -31,6 +31,7 @@ public class LeverToggle : MonoBehaviour
     private void changeActiveState() {
         for (int i = 0; i < target.Length; i++)
             target[i].SetActive(isActive);
+            Debug.Log("Activity Changed");
     }
 
     private void changeAnimState() {

@@ -2017,6 +2017,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 102130, guid: 1acd03bc537c24f3484ab4d6f07b9e02, type: 3}
   m_PrefabInstance: {fileID: 851827190}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &66052822
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66052821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &66147066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4160,9 +4179,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 66052821}
     - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
-      propertyPath: target.Array.size
+      propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.data[0]
+      value: 
+      objectReference: {fileID: 66052821}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.data[0]
+      value: 
+      objectReference: {fileID: 66052822}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever
