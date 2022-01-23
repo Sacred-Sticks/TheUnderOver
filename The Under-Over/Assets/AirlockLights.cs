@@ -6,31 +6,37 @@ public class AirlockLights : MonoBehaviour
 {
     [SerializeField] private GameObject[] airlockSwitch;
     [SerializeField] private Light[] light;
+    [SerializeField] private float waitTime;
     private bool active;
 
-    private Color[] colors;
+    [SerializeField] private Color[] colors;
     private Color currentColor;
+
+    private int colorCounter;
 
     private void Awake() {
         active = false;
         currentColor = colors[0];
+        colorCounter = 0;
     }
 
     private void Update()
     {
         if (!active) {
-            active = GetActive();
+            active = GetComponent<AirlockControl>().GetComplete();
         } else {
             for (int i = 0; i < light.Length; i++) {
                 light[i].color = currentColor;
             }
-            swapColors();
+            colorCounter++;
+            if (colorCounter % waitTime == 0)
+                swapColors();
         }
     }
 
     private bool GetActive() {
         for (int i = 0; i < airlockSwitch.Length; i++) {
-            bool isActive = airlockSwitch[i].GetComponent<LeverToggle>().GetIsActive();
+            bool isActive = airlockSwitch[i].GetComponent<AirlockLever>().isActive;
             if (!isActive) {
                 return false;
             }

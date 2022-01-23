@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LockdownLever : MonoBehaviour
+public class AirlockLever : MonoBehaviour
 {
     Animator leverAnim;
-    [SerializeField] bool isActive;
+    [SerializeField] public bool isActive;
     AirlockControl controller;
     public int seq;
     // Start is called before the first frame update
     private void Awake()
     {
         controller = GameObject.Find("SystemAI").GetComponent<AirlockControl>();
-        GetComponent<Animator>();
+        leverAnim = GetComponent<Animator>();
     }
     void Interact()
     {
