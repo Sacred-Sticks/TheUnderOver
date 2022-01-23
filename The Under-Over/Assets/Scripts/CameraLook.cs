@@ -13,6 +13,7 @@ public class CameraLook : MonoBehaviour
     private float horz;
     private float vert;
     private float verticalRotation;
+    public float interactRange;
 
     private void Awake() {
         var actionMap = playerControls.FindActionMap("Main Controls");
@@ -26,6 +27,8 @@ public class CameraLook : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+
 
     private void LateUpdate() {
         UpdateHorz();

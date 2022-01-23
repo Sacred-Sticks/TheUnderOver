@@ -9,13 +9,18 @@ public class SparkObstacle : MonoBehaviour
     public float activeSec;
     public float resetSec;
     float timer;
+    [SerializeField] float penalty;
     //bool isArmed;
-    [SerializeField] BoxCollider dmgBox;
+    [SerializeField] Collider dmgBox;
     [SerializeField] ParticleSystem sparkEmitter;
-    void Start()
+
+    Movement playerMovement;
+    void Awake()
     {
+        playerMovement = GameObject.Find("Player").GetComponent<Movement>();
         timer = resetSec;
-        TurnOff(); // get into the loop
+        float activationOffset = Random.Range(0, activeSec);
+        Invoke("TurnOn", activationOffset); // get into the loop but stagger the emitters
     }
 
 
@@ -37,8 +42,18 @@ public class SparkObstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider col) {
         if (col.tag == "Player") {
-            SceneManager.LoadScene("Culling 2");
+
+            //SceneManager.LoadScene("Culling 2");
         }
     }
-    
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "Player")
+        {
+            //SceneManager.LoadScene("Culling 2");
+            
+        }
+    }
+
 }
