@@ -10,6 +10,7 @@ public class MonsterAI : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Animator anim;
+    [SerializeField] Animator scannerAnim;
     public float atkRange;
     [SerializeField] Transform playerDummy;
     [SerializeField] private float speed;
@@ -62,7 +63,8 @@ public class MonsterAI : MonoBehaviour
     }
 
     private void IncreaseSpeed() {
-        if (speed < speedLimit)
+        bool currentlyScanning = scannerAnim.GetBool("Scanning");
+        if (speed < speedLimit && !currentlyScanning)
         speed = Mathf.Pow(speed, speedExponent);
         SetSpeed();
     }

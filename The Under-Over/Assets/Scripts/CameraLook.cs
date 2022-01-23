@@ -56,7 +56,7 @@ public class CameraLook : MonoBehaviour
         return maxSensitivity;
     }
 
-    public void setMouseSens(float sensitivity) {
+    public void setMouseSensitivity(float sensitivity) {
         currentSensitivity = sensitivity;
         Debug.Log(currentSensitivity);
     }

@@ -32,6 +32,7 @@ public class ScannerControl : MonoBehaviour
             animator.SetBool("Scanning", false);
         } else {
             animator.SetBool("Scanning", true);
+            GetComponentInParent<StartLevel>().setTime(1);
         }
     }
 }

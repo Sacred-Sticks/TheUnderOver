@@ -17,6 +17,7 @@ public class StartLevel : MonoBehaviour
         scanAction.performed += OnScanChange;
         scanAction.canceled += OnScanChange;
         scanAction.Enable();
+        currentTime = 0;
     }
 
     private void OnScanChange(InputAction.CallbackContext context) {
@@ -35,5 +36,9 @@ public class StartLevel : MonoBehaviour
 
     public float getTime() {
         return currentTime;
+    }
+
+    public void setTime(float newTime) {
+        currentTime = newTime;
     }
 }

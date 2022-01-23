@@ -40282,8 +40282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControls: {fileID: -944628639613478452, guid: f3e8d849efc445b419856784313ec15c, type: 3}
   playerBody: {fileID: 1301693502}
-  mouseSensitivity: 0.1
-  interactRange: 0
+  maxSensitivity: 1.5
 --- !u!1001 &964245001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101570,6 +101569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2456941300583780906}
+  scannerAnim: {fileID: 1968733608}
   atkRange: 3
   playerDummy: {fileID: 2088021249}
   speed: 1.34

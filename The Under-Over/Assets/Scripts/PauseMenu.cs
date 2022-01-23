@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
         float maxSensitivity = cam.GetComponent<CameraLook>().getMaxSensitivity();
         Debug.Log(maxSensitivity);
         float newSensitivity = maxSensitivity * sensitivityBar;
-        cam.GetComponent<CameraLook>().setMouseSens(newSensitivity);
+        cam.GetComponent<CameraLook>().setMouseSensitivity(newSensitivity);
         Debug.Log("Sensitivity Changed");
     }
 
