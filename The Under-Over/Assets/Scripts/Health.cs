@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
 
     private void Update() {
         if (health <= 0) {
-            SceneManager.LoadScene("Culling 2");
+            SceneManager.LoadScene("Level");
         }
     }
 }

@@ -8,6 +8,7 @@ public class StartLevel : MonoBehaviour
     [SerializeField] private InputActionAsset playerControls;
     private InputAction scanAction;
     private float scanValue;
+    private float currentTime;
 
     private void Awake() {
         var actionMap = playerControls.FindActionMap("Main Controls");
@@ -30,5 +31,9 @@ public class StartLevel : MonoBehaviour
         if (scanValue != 0) {
             Time.timeScale = 1.0f;
         }
+    }
+
+    public float getTime() {
+        return currentTime;
     }
 }
