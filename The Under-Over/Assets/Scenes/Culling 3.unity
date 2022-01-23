@@ -1615,6 +1615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControls: {fileID: -944628639613478452, guid: f3e8d849efc445b419856784313ec15c, type: 3}
   pauseMenu: {fileID: 1520330222}
+  player: {fileID: 1301693498}
   cam: {fileID: 963194227}
 --- !u!1001 &54995709
 PrefabInstance:

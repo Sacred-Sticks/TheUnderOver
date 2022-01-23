@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject player;
     private InputAction pauseOpened;
     bool paused;
 
@@ -53,7 +54,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         } else {
             pauseMenu.SetActive(false);
-            Time.timeScale = 1;
+            Time.timeScale = player.GetComponent<StartLevel>().getTime();
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
