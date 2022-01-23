@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class LeverToggle : MonoBehaviour
 {
-    [SerializeField] GameObject target;
-    [SerializeField] Animator optional_doorAnim;
+    [SerializeField] GameObject[] target;
+    [SerializeField] Animator[] optional_doorAnim;
     Animator leverAnim;
-    bool isActive;
+    [SerializeField] bool isActive;
     // Update is called once per frame
     public void Awake()
     {
         leverAnim = GetComponent<Animator>();
-        isActive = false;
         leverAnim.SetBool("isActive", isActive);
-        target.SetActive(isActive);
+        changeActiveState();
     }
 
     public void Interact()
@@ -23,9 +22,20 @@ public class LeverToggle : MonoBehaviour
         isActive = !isActive;
         leverAnim.SetBool("isActive", isActive);
 
-        if (optional_doorAnim)
-            optional_doorAnim.SetBool("isOpen", isActive);
+        if (optional_doorAnim != null)
+            changeAnimState();
 
-        target.SetActive(isActive);
+        changeActiveState();
+    }
+
+    private void changeActiveState() {
+        for (int i = 0; i < target.Length; i++)
+            target[i].SetActive(isActive);
+            Debug.Log("Activity Changed");
+    }
+
+    private void changeAnimState() {
+        for (int i = 0; i < optional_doorAnim.Length; i++)
+            optional_doorAnim[i].SetBool("isOpen", !isActive);
     }
 }
