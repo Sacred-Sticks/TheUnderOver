@@ -3394,7 +3394,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75997101
 MonoBehaviour:
@@ -17374,6 +17374,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever (6)
@@ -18291,6 +18299,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever (4)
@@ -22643,6 +22659,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever (1)
@@ -55834,6 +55858,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: target.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874599988482452239, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
+      propertyPath: optional_doorAnim.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874962685218244257, guid: dd8d62c0affd9e14586e97dc1c19f8b1, type: 3}
       propertyPath: m_Name
       value: Lever (5)
