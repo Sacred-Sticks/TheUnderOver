@@ -45,6 +45,7 @@ public class MonsterAI : MonoBehaviour
 
     void NavTick()
     {
+        if (nma.isActiveAndEnabled)
         nma.SetDestination(playerDummy.position);
     }
 

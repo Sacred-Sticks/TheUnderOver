@@ -14,6 +14,7 @@ public class CameraLook : MonoBehaviour
     private float vert;
     private float verticalRotation;
     private float currentSensitivity;
+    private Vector2 cameraLook;
 
     private void Awake() {
         var actionMap = playerControls.FindActionMap("Main Controls");
@@ -35,10 +36,7 @@ public class CameraLook : MonoBehaviour
         UpdateVert();
     }
     private void OnLookChange(InputAction.CallbackContext context) {
-        Vector2 cameraLook = context.ReadValue<Vector2>();
-
-        horz = cameraLook.x * currentSensitivity;
-        vert = cameraLook.y * currentSensitivity;
+        cameraLook = context.ReadValue<Vector2>();
     }
 
     private void UpdateHorz() {
@@ -60,4 +58,15 @@ public class CameraLook : MonoBehaviour
         currentSensitivity = sensitivity;
         Debug.Log(currentSensitivity);
     }
+
+    private void Update()
+    {
+        if (Time.timeScale > 0)
+        {
+            horz = cameraLook.x * currentSensitivity * Time.fixedDeltaTime;
+            vert = cameraLook.y * currentSensitivity * Time.fixedDeltaTime;
+        }
+    }
+
+    
 }

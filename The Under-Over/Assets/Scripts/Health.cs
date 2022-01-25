@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float damage;
     Camera deathcam;
     NavMeshAgent monsterAgent;
+    [SerializeField] private float killTime;
     private void Awake()
     {
         deathcam = GameObject.Find("deathcam").GetComponent<Camera>();
@@ -34,13 +35,13 @@ public class Health : MonoBehaviour
         // switch camera to close up of monster and change monster animation into killing blow
         monsterAgent.enabled = false;
             deathcam.enabled = true;
-        Invoke("WaitToSwap", 4f);
+        Invoke("WaitToSwap", killTime);
 
     }
 
     void WaitToSwap()
     {
         Debug.Log("Invoking swap");
-        SceneManager.LoadScene("Culling 2");
+        SceneManager.LoadScene("Level");
     }
 }

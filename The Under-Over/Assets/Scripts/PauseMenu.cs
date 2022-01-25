@@ -23,6 +23,8 @@ public class PauseMenu : MonoBehaviour
         pauseOpened.Enable();
 
         paused = false;
+
+        cam.GetComponent<CameraLook>().setMouseSensitivity(cam.GetComponent<CameraLook>().getMaxSensitivity() * 0.5f);
     }
 
     private void OnChangePause(InputAction.CallbackContext context) {
@@ -37,10 +39,16 @@ public class PauseMenu : MonoBehaviour
 
     public void onChangeSensitivity(float sensitivityBar) {
         float maxSensitivity = cam.GetComponent<CameraLook>().getMaxSensitivity();
-        Debug.Log(maxSensitivity);
-        float newSensitivity = maxSensitivity * sensitivityBar;
+        if (sensitivityBar < 0.5f)
+        {
+            sensitivityBar += 0.5f;
+        } else if (sensitivityBar >0.5f)
+        {
+            sensitivityBar -= 0.5f;
+        }
+        float newSensitivity = maxSensitivity * (sensitivityBar);
+        newSensitivity *= 0.5f;
         cam.GetComponent<CameraLook>().setMouseSensitivity(newSensitivity);
-        Debug.Log("Sensitivity Changed");
     }
 
     public void onClickMenu() {

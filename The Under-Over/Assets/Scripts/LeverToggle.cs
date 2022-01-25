@@ -30,12 +30,14 @@ public class LeverToggle : MonoBehaviour
 
     private void changeActiveState() {
         for (int i = 0; i < target.Length; i++)
+            if (target[i] != null)
             target[i].SetActive(isActive);
             Debug.Log("Activity Changed");
     }
 
     private void changeAnimState() {
         for (int i = 0; i < optional_doorAnim.Length; i++)
+            if (optional_doorAnim[i] != null)
             optional_doorAnim[i].SetBool("isOpen", !isActive);
     }
 

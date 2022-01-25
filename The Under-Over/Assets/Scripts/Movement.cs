@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -121,7 +122,7 @@ public class Movement : MonoBehaviour
 		if (CheckJump()) {
 			rb.AddForce(Vector3.up * jumpInput * jumpForce);
 		}
-	}
+    }
 
 	private bool CheckJump() {
 		return Physics.CheckSphere(feet.position, floorRange, ground);
