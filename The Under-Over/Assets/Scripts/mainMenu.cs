@@ -9,10 +9,12 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private GameObject[] menuItems;
     [SerializeField] private GameObject[] creditsItems;
     [SerializeField] private GameObject[] controlsItems;
+    [SerializeField] private GameObject[] storyItems;
     
     private void Awake() {
         disableMenu(creditsItems);
         disableMenu(controlsItems);
+        disableMenu(storyItems);
         enableMenu(menuItems);
     }
 
@@ -22,24 +24,29 @@ public class mainMenu : MonoBehaviour
 
     public void creditsButton() {
         disableMenu(menuItems);
-        disableMenu(controlsItems);
         enableMenu(creditsItems);
+    }
+    public void controlsButton()
+    {
+        disableMenu(menuItems);
+        enableMenu(controlsItems);
+    }
+
+    public void storyButton()
+    {
+        disableMenu(menuItems);
+        enableMenu(storyItems); 
     }
 
     public void menuButton() {
         disableMenu(creditsItems);
         disableMenu(controlsItems);
+        disableMenu(storyItems);
         enableMenu(menuItems);
     }
 
     public void quitButton() {
         Application.Quit();
-    }
-
-    public void controlsButton() {
-        disableMenu(menuItems);
-        disableMenu(creditsItems);
-        enableMenu(controlsItems);
     }
 
     private void disableMenu(GameObject[] menu) {

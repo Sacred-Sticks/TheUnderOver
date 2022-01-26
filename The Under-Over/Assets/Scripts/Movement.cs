@@ -104,12 +104,11 @@ public class Movement : MonoBehaviour
     {
 		if (other.CompareTag("slowZone"))
         {
-			Debug.Log("SlowZoneStay");
+			//Debug.Log("SlowZoneStay");
 			if (moveSpeed - slowedPenalty < currentSpeedVal) // if movement speed minus the penalty is less than the current speed, then slow the player back down
 				SlowMovement(moveSpeed - slowedPenalty);
         }
     }
-
 
     private void Update() {
 		Vector3 movement = (transform.right * movementInput.x + transform.forward * movementInput.y);
@@ -122,6 +121,10 @@ public class Movement : MonoBehaviour
 		if (CheckJump()) {
 			rb.AddForce(Vector3.up * jumpInput * jumpForce);
 		}
+		if (transform.position.x < -30)
+        {
+			GameObject.Find("SystemAI").GetComponent<AirlockControl>().EndUI();
+        }
     }
 
 	private bool CheckJump() {

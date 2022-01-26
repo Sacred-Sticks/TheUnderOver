@@ -3407,36 +3407,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23557985, y: 0.055424877, z: 0.23557998}
   m_Center: {x: -0.000000074505806, y: 0.027712405, z: 0.000000022351742}
---- !u!1 &2944656777994159527
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 512538480298168960}
-  m_Layer: 0
-  m_Name: SystemAI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &512538480298168960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2944656777994159527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3173282055384776371}
-  m_RootOrder: 148
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3016357552475875536
 GameObject:
   m_ObjectHideFlags: 0
@@ -12415,7 +12385,6 @@ Transform:
   - {fileID: 8555411392114833891}
   - {fileID: 4326653795014722828}
   - {fileID: 8551503522925537779}
-  - {fileID: 512538480298168960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -47470,8 +47439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8789921306612736044}
   - component: {fileID: 2401959445281481052}
-  - component: {fileID: 3861296620963367183}
-  - component: {fileID: 1361464859615185234}
   m_Layer: 0
   m_Name: P_Spaceship_Walkyrie_Mark_1
   m_TagString: Untagged
@@ -47602,55 +47569,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &3861296620963367183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8747262414261731828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395fe3f27c8d0c0459270e482334eebd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wingLeft: {fileID: 3559825241384305749}
-  wingRight: {fileID: 2088387963831295405}
-  wingSound: {fileID: 8300000, guid: fc70b40c4a248a946b77c26198ee17a0, type: 3}
-  wingMoveAngle: 90
-  wingMoveTime: 6
-  cockpitGlass: {fileID: 2608668948499811414}
-  cockpitMoveAngle: 90
-  cockpitMoveTime: 6
-  cockpitSound: {fileID: 8300000, guid: fc70b40c4a248a946b77c26198ee17a0, type: 3}
-  gearA: {fileID: 1048680603511190952}
-  gearB: {fileID: 630465012624810130}
-  gearC: {fileID: 3943121843776858392}
-  gearMoveAngle: -90
-  gearMoveTime: 6
-  gearSound: {fileID: 8300000, guid: fc70b40c4a248a946b77c26198ee17a0, type: 3}
-  reactorAfterburnerA: {fileID: 4558902095663975086}
-  reactorAfterburnerB: {fileID: 4472970428863340406}
-  reactorAfterburnerASound: {fileID: 8300000, guid: ecf039960eadb4b46865277828e420ac, type: 3}
-  reactorAfterburnerStrengh: 0.3
-  walkyrieAnimSwitch: 0
-  walkyrieAnimARunning: 0
-  walkyrieAnimBRunning: 0
-  walkyrieAnimCRunning: 0
-  walkyrieAfterburnerOn: 0
-  walkyrieEngineOn: 1
---- !u!114 &1361464859615185234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8747262414261731828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b907c38e69373764e8c76c207d385f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8762989303295900146
 GameObject:
   m_ObjectHideFlags: 0
@@ -53165,14 +53083,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0997ab6bd01496fa1a1e74586f2cea, type: 3}
---- !u!1 &3405128072425570498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1084551100610290, guid: 1b0997ab6bd01496fa1a1e74586f2cea, type: 3}
-  m_PrefabInstance: {fileID: 3405472922145699376}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3408597323739669300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4343761336079620, guid: 1b0997ab6bd01496fa1a1e74586f2cea, type: 3}
+  m_PrefabInstance: {fileID: 3405472922145699376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3405128072425570498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1084551100610290, guid: 1b0997ab6bd01496fa1a1e74586f2cea, type: 3}
   m_PrefabInstance: {fileID: 3405472922145699376}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5552999690132809505

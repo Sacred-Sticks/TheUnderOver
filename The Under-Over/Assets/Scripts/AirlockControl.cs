@@ -16,17 +16,21 @@ public class AirlockControl : MonoBehaviour
     [SerializeField] private Rigidbody playerRB;
 
     private bool complete;
+    private bool doorsOpen;
+    private int remaining;
     private void Awake()
     {
         activated = new bool[animators.Length]; // the animator of each lever, needed to activate the conditional
         complete = false;
         endUI.SetActive(false);
+        doorsOpen = false;
+        remaining = animators.Length;
     }
+
     public void UpdateConditional(int seq, bool activeState)
     {
         activated[seq] = activeState;
         // now check to see if enabling / disabling this lever got us anywhere...
-        int remaining = animators.Length;
         for (int i = 0; i < animators.Length; i++)
         {
             // if there is any that have not been activated, do not initiate the end game sequence yet.
@@ -49,6 +53,12 @@ public class AirlockControl : MonoBehaviour
             Invoke("AirlockUnlock", airlockdelaytime);
 
         }
+
+        if (doorsOpen)
+        {
+            Vector3 newGrav = new Vector3(1000, 0, 0);
+            playerRB.AddForce(newGrav);
+        }
     }
 
     public bool GetComplete() {
@@ -61,12 +71,10 @@ public class AirlockControl : MonoBehaviour
         }
         playerRB.useGravity = false;
 
-        Vector3 newGrav = new Vector3(Physics.gravity.y * 100, Physics.gravity.x, Physics.gravity.z);
-        playerRB.AddForce(newGrav);
-        Invoke("EndUI", .5f);
+        doorsOpen = true;
     }
 
-    private void EndUI() {
+    public void EndUI() {
         endUI.SetActive(true);
         pauseUI.SetActive(false);
     }

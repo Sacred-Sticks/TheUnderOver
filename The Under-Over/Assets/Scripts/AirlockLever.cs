@@ -14,6 +14,7 @@ public class AirlockLever : MonoBehaviour
         controller = GameObject.Find("SystemAI").GetComponent<AirlockControl>();
         leverAnim = GetComponent<Animator>();
     }
+
     void Interact()
     {
         isActive = !isActive;

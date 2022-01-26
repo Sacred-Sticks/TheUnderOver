@@ -30951,7 +30951,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.4716981
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3861296620963367183, guid: 3bb43ee215ee7c948ba32e4425378791, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3bb43ee215ee7c948ba32e4425378791, type: 3}
 --- !u!1001 &844669074
 PrefabInstance:
@@ -74022,6 +74023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControl: {fileID: -944628639613478452, guid: f3e8d849efc445b419856784313ec15c, type: 3}
   monster: {fileID: 9201754952945750762}
+  redCam: {fileID: 2088021246}
+  timeForScan: 2
+  screen: {fileID: 1968733603}
 --- !u!1001 &1971051691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92107,7 +92111,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3861296620963367183, guid: 3bb43ee215ee7c948ba32e4425378791, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3bb43ee215ee7c948ba32e4425378791, type: 3}
 --- !u!4 &3207937566128599689
 Transform:
