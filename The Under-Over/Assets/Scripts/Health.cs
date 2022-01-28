@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
 
     void WaitToSwap()
     {
-        Debug.Log("Invoking swap");
+        //Debug.Log("Invoking swap");
         SceneManager.LoadScene("Level");
     }
 }

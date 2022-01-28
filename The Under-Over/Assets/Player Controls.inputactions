@@ -135,7 +135,7 @@
                 {
                     "name": "",
                     "id": "6fa01ff3-68b9-43ee-83d8-c15f197d0491",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -146,7 +146,7 @@
                 {
                     "name": "",
                     "id": "157500bc-2594-4e08-9f0b-ab99e76d0497",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

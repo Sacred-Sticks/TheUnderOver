@@ -54,7 +54,7 @@ public class CameraLook : MonoBehaviour
 
     public void setMouseSensitivity(float sensitivity) {
         currentSensitivity = sensitivity;
-        Debug.Log(currentSensitivity);
+        //Debug.Log(currentSensitivity);
     }
 
     private void Update()

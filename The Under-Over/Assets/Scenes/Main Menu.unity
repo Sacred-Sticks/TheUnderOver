@@ -5245,14 +5245,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'It All Began When The Alien Got On The Ship. It would Enchant The People
-    With Visions So That They Would Not Know It Was There. If They Did, They Would
-    Be Shown Visions To Prevent Them From Escaping Before The Alien Could Eat Them.
+  m_text: 'It all began when the Alien arrived on the ship. It would give the crew
+    visions to stop them from seeing things around them. Alternatively, it would
+    also give visions of things that aren''t actually present in reality.
 
 
-    Luckily,
-    You Just Installed A Scanner Onto Your Visor Which Will Let You See The Real
-    World Instead Of The Illusions.'
+    You
+    thought you had contained it but it escaped, luckily you just finished installing
+    a scanner into your visor which let''s you see the real world, separate from
+    the illusions.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

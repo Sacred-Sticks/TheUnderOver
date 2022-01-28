@@ -41,18 +41,12 @@ public class DoorDoubleSlide : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         opening = true;
-
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
     }
 
     //Something left? close doors
     void OnTriggerExit(Collider other)
     {
         opening = false;
-
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
     }
 	
 

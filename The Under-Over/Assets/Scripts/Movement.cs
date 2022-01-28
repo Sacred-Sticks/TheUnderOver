@@ -17,6 +17,9 @@ public class Movement : MonoBehaviour
 	[SerializeField] private Transform feet;
 	[SerializeField] private LayerMask ground;
 	[SerializeField] private float floorRange;
+	[Space]
+	[Header("Other")]
+	[SerializeField] private float gravityForce;
 
 	private InputAction moveAction;
 	private InputAction jumpAction;
@@ -27,6 +30,7 @@ public class Movement : MonoBehaviour
 	private GameObject blueCam;
 	private GameObject redCam;
 	private float currentSpeedVal;
+	private GameObject systemAI;
 	private void Awake() {
 
 		currentSpeedVal = moveSpeed;
@@ -48,6 +52,8 @@ public class Movement : MonoBehaviour
 		useAction.performed += Interact;
 		useAction.Enable();
 		rb = GetComponent<Rigidbody>();
+
+		systemAI = GameObject.Find("SystemAI");
 	}
 
 	public void SlowMovement(float mod)
@@ -79,7 +85,7 @@ public class Movement : MonoBehaviour
 		Debug.DrawRay(blueCam.transform.position, blueCam.transform.forward, Color.blue, interactRange, false);
 			if (Physics.Raycast(blueCam.transform.position, blueCam.transform.forward, out hit, interactRange) && context.performed)
 			{
-			Debug.Log("Hit: " + hit.transform.name);
+				//Debug.Log("Hit: " + hit.transform.name);
 				if (hit.transform.CompareTag("interactable"))
             {
 				//Debug.Log("Sending Interact()");
@@ -90,7 +96,7 @@ public class Movement : MonoBehaviour
 
 		if (Physics.Raycast(redCam.transform.position, blueCam.transform.forward, out hit, interactRange) && context.performed)
 		{
-			Debug.Log("Hit: " + hit.transform.name);
+			//Debug.Log("Hit: " + hit.transform.name);
 			if (hit.transform.CompareTag("interactable"))
 			{
 				//Debug.Log("Sending Interact()");
@@ -125,9 +131,21 @@ public class Movement : MonoBehaviour
         {
 			GameObject.Find("SystemAI").GetComponent<AirlockControl>().EndUI();
         }
+
+		AirlockOpened();
     }
 
 	private bool CheckJump() {
 		return Physics.CheckSphere(feet.position, floorRange, ground);
+	}
+
+	private void AirlockOpened() {
+		if (systemAI.GetComponent<AirlockControl>().getDoorsOpen())
+		{
+			GetComponent<CapsuleCollider>().enabled = false;
+			Vector3 newGrav = (gravityForce * -Vector3.right);
+			rb.AddForce(newGrav);
+			//Debug.Log("Force Added");
+		}
 	}
 }
